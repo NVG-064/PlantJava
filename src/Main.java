@@ -4,6 +4,8 @@ public class Main {
 
     private static Plant plant;
 
+    private static Garden garden;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         initPlant();
@@ -12,7 +14,8 @@ public class Main {
             MyUtils.clearScreen(); // Clear screen
             System.out.println("\t\tMiGarden\n");
 
-            plant.displayPlant(); // Display Plant
+            garden.displayPlant();
+            // plant.displayPlant(); // Display Plant
             System.out.println("\nMasukkan:");
             System.out.println("1 untuk memberi air");
             System.out.println("2 untuk memberi pupuk");
@@ -43,9 +46,14 @@ public class Main {
 
     static void initPlant() {
         int num = MyUtils.generateRandomInt(0, 1);
-        if (num == 0)
+        garden = new Garden();
+        if (num == 0) {
             plant = new Fruit();
-        else
+            garden.addPlant(plant, num);
+        }
+        else {
             plant = new Flower();
+            garden.addPlant(plant, num);
+        }
     }
 }
