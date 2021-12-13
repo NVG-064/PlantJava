@@ -1,8 +1,7 @@
 public class Fruit extends Plant {
     public Fruit() {
         super();
-        RandomNumber rn = new RandomNumber();
-        int index = rn.createRandomNumber(0, fruitList.length);
+        int index = MyUtils.generateRandomInt(0, fruitList.length);
         plantName = fruitList[index];
     }
 

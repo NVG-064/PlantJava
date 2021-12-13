@@ -42,8 +42,7 @@ public class PlantMain {
     }
 
     static void initPlant() {
-        RandomNumber rng = new RandomNumber();
-        int num = rng.createRandomNumber(0, 1);
+        int num = MyUtils.generateRandomInt(0, 1);
         if (num == 0)
             plant = new Fruit();
         else
