@@ -1,6 +1,6 @@
 import java.util.Scanner; // Import Scanner library
 
-public class PlantMain {
+public class Main {
 
     private static Plant plant;
 
