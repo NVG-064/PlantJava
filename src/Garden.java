@@ -1,78 +1,70 @@
 import java.util.ArrayList;
 
 public class Garden {
-    private int SIZE = 10;
-    private int nTanaman = 0;
-    private String mGardenName;
+    private String gardenName;
     private ArrayList<Plant> plantList;
-    private int hasilPanen;
-    private int flags;
-    
-    
-    public Garden(String pName) {
+    private int harvestPoint;
+
+    public Garden(String name) {
         plantList = new ArrayList<Plant>();
-        mGardenName = pName;
+        gardenName = name;
     }
 
-    public Garden() {
-        this("MiGarden"); // Change UGarden to MiGarden
+    public int getHarvestPoint() {
+        return harvestPoint;
     }
 
-    public boolean addPlant(Plant p, int flags) {
-        if(nTanaman < SIZE) {
-            plantList.add(p);
-            nTanaman++;
-            this.flags = flags;
-            return true;
-        } else
-            return false;
+    public void addPlant() {
+        int num = MyUtils.generateRandomInt(0, 1);
+        Plant plant;
+        if (num == 0) {
+            plant = new Fruit();
+        } else {
+            plant = new Flower();
+        }
+        plantList.add(plant);
     }
 
-    public int harvestPlant() {
-        int tmpN=0;
-        int i=0;
-        
-        while ((plantList != null) && (i < plantList.size())) {
-            if(plantList.get(i).getGrowthStatus() == 4) {
+    public void addPlant(Plant p) {
+        plantList.add(p);
+    }
+
+    public void harvestPlant() {
+        int harvestCount = 0;
+
+        for (int i = plantList.size(); i >= 0; --i) {
+            if (plantList.get(i).getGrowthStage() > 4) {
+                harvestCount++;
                 plantList.remove(i);
-                nTanaman--;
-                tmpN++;
-                i=0;
-            } else
-                i++;
+            }
         }
-        
-        hasilPanen = hasilPanen + (tmpN*100);
-        return tmpN;
+
+        harvestPoint += harvestCount * 100;
     }
 
-    public void beriAir() {
-        for (int i = 0; i < plantList.size(); i++) {
-            plantList.get(i).giveWater();
+    public void waterPlants() {
+        for (Plant plant : plantList) {
+            plant.giveWater();
         }
     }
 
-    public void beriPupuk() {
-        for (int i = 0; i < plantList.size(); i++) {
-            plantList.get(i).giveFertilizer();
+    public void fertilizePlants() {
+        for (Plant plant : plantList) {
+            plant.giveFertilizer();
         }
     }
 
-    public void displayPlant() {
-        System.out.println("\t\t" + mGardenName + "\n\n");
-        System.out.println("There are " + nTanaman + " plant(s) in the garden");
-        System.out.println("Your harvest point: " + hasilPanen);
-        
+    public void displayPlants() {
+        System.out.println("\t\t" + gardenName + "\n\n");
+        System.out.println("There are " + plantList.size() + " plant(s) in the garden");
+        System.out.println("Your harvest point: " + harvestPoint);
+
         for (int i = 0; i < plantList.size(); i++) {
             if (i != plantList.size())
                 System.out.println("\n=======================================================\n");
-            plantList.get(i).displayPlant(flags);
-            if ((i == plantList.size()) || (i == plantList.size()-1))
+            plantList.get(i).printStatus();
+            if (i == plantList.size() - 1)
                 System.out.println("\n=======================================================\n");
         }
-    }
-
-    public int getHasilPanen() {
-        return hasilPanen;
     }
 }

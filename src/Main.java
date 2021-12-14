@@ -1,21 +1,16 @@
 import java.util.Scanner; // Import Scanner library
 
 public class Main {
-
-    private static Plant plant;
     private static Garden garden;
 
     public static void main(String[] args) {
-        garden = new Garden();
+        garden = new Garden("MiGarden");
         Scanner sc = new Scanner(System.in);
-        initPlant();
-        //index++;
 
         for (;;) {
             MyUtils.clearScreen(); // Clear screen
 
-            garden.displayPlant();
-            // plant.displayPlant(); // Display Plant
+            garden.displayPlants();
             System.out.println("\nMasukkan:");
             System.out.println("1 untuk memberi air");
             System.out.println("2 untuk memberi pupuk");
@@ -25,15 +20,15 @@ public class Main {
             int input = sc.nextInt(); // Scan user input
             switch (input) {
                 case 1:
-                    garden.beriAir(); // Tambah air
+                    garden.waterPlants(); // Tambah air
                     break;
 
                 case 2:
-                    garden.beriPupuk(); // Tambah pupuk
+                    garden.fertilizePlants(); // Tambah pupuk
                     break;
 
                 case 5:
-                    initPlant();
+                    garden.addPlant();
                     break;
 
                 case 7:
@@ -41,18 +36,6 @@ public class Main {
                     System.exit(0); // Exit the program
                     break;
             }
-        }
-    }
-
-    static void initPlant() {
-        int num = MyUtils.generateRandomInt(0, 1);
-        if (num == 0) {
-            plant = new Fruit();
-            garden.addPlant(plant, num);
-        }
-        else {
-            plant = new Flower();
-            garden.addPlant(plant, num);
         }
     }
 }
