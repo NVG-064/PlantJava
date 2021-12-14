@@ -63,9 +63,11 @@ public abstract class Plant {
         }
     }
 
-    public void displayPlant() {
+    public void displayPlant(int flags) {
         System.out.println(displayGrowthStatus() + " (Tahap " + getGrowthStatus() + ")\n");
-        if (growthStage > 3)
+        if ((flags == 0) && (growthStage > 4))
+            System.out.println("Nama Tanaman    : " + getPlantName() + "\n");
+        else if ((flags == 1) && (growthStage > 3))
             System.out.println("Nama Tanaman    : " + getPlantName() + "\n");
         System.out.println("Jumlah air      : " + waterCount);
         System.out.println("Jumlah pupuk    : " + fertilizerCount);

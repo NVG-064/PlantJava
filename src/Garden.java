@@ -6,6 +6,7 @@ public class Garden {
     private String mGardenName;
     private ArrayList<Plant> plantList;
     private int hasilPanen;
+    private int flags;
     
     
     public Garden(String pName) {
@@ -14,13 +15,14 @@ public class Garden {
     }
 
     public Garden() {
-        this("UGarden");
+        this("MiGarden"); // Change UGarden to MiGarden
     }
 
     public boolean addPlant(Plant p, int flags) {
         if(nTanaman < SIZE) {
             plantList.add(p);
             nTanaman++;
+            this.flags = flags;
             return true;
         } else
             return false;
@@ -57,12 +59,12 @@ public class Garden {
     }
 
     public void displayPlant() {
-        System.out.println("----------" + mGardenName + "----------");
+        System.out.println("----------" + mGardenName + "----------\n");
         System.out.println("There are " + nTanaman + " plant(s) in the garden");
-        System.out.println("Your harvest point:" + hasilPanen);
+        System.out.println("Your harvest point: " + hasilPanen);
         
         for (int i = 0; i < plantList.size(); i++) {
-            plantList.get(i).displayPlant();
+            plantList.get(i).displayPlant(flags);
         }
     }
 
