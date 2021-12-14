@@ -3,33 +3,33 @@ import java.util.Scanner; // Import Scanner library
 public class Main {
 
     private static Plant plant;
-
     private static Garden garden;
 
     public static void main(String[] args) {
+        garden = new Garden();
         Scanner sc = new Scanner(System.in);
         initPlant();
+        //index++;
 
         for (;;) {
             MyUtils.clearScreen(); // Clear screen
-            System.out.println("\t\tMiGarden\n");
 
             garden.displayPlant();
             // plant.displayPlant(); // Display Plant
             System.out.println("\nMasukkan:");
             System.out.println("1 untuk memberi air");
             System.out.println("2 untuk memberi pupuk");
-            System.out.println("5 untuk tebang tanaman dan tanam benih baru");
+            System.out.println("5 untuk tanam benih baru");
             System.out.println("7 untuk keluar dari program\n");
 
             int input = sc.nextInt(); // Scan user input
             switch (input) {
                 case 1:
-                    plant.giveWater(); // Tambah air
+                    garden.beriAir(); // Tambah air
                     break;
 
                 case 2:
-                    plant.giveFertilizer(); // Tambah pupuk
+                    garden.beriPupuk(); // Tambah pupuk
                     break;
 
                 case 5:
@@ -46,7 +46,6 @@ public class Main {
 
     static void initPlant() {
         int num = MyUtils.generateRandomInt(0, 1);
-        garden = new Garden();
         if (num == 0) {
             plant = new Fruit();
             garden.addPlant(plant, num);
