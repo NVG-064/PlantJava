@@ -13,7 +13,6 @@ public class Main {
 
         for (;;) {
             MyUtils.clearScreen(); // Clear screen
-            System.out.println("\t\tMiGarden\n");
 
             garden.displayPlant();
             // plant.displayPlant(); // Display Plant
@@ -26,11 +25,11 @@ public class Main {
             int input = sc.nextInt(); // Scan user input
             switch (input) {
                 case 1:
-                    plant.giveWater(); // Tambah air
+                    garden.beriAir(); // Tambah air
                     break;
 
                 case 2:
-                    plant.giveFertilizer(); // Tambah pupuk
+                    garden.beriPupuk(); // Tambah pupuk
                     break;
 
                 case 5:
