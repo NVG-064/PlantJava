@@ -8,7 +8,7 @@ public class Flower extends Plant {
     // Nama Bunga
     // Link source:
     // https://id.wikipedia.org/wiki/Kategori:Bunga
-    private String[] flowerList = {
+    private final String[] flowerList = {
             "Ajang Kelicung",
             "Alternanthera",
             "Amarilis",
