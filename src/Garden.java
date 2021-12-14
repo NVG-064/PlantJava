@@ -59,12 +59,16 @@ public class Garden {
     }
 
     public void displayPlant() {
-        System.out.println("----------" + mGardenName + "----------\n");
+        System.out.println("\t\t" + mGardenName + "\n\n");
         System.out.println("There are " + nTanaman + " plant(s) in the garden");
         System.out.println("Your harvest point: " + hasilPanen);
         
         for (int i = 0; i < plantList.size(); i++) {
+            if (i != plantList.size())
+                System.out.println("\n=======================================================\n");
             plantList.get(i).displayPlant(flags);
+            if ((i == plantList.size()) || (i == plantList.size()-1))
+                System.out.println("\n=======================================================\n");
         }
     }
 
