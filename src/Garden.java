@@ -56,8 +56,8 @@ public class Garden {
 
     public void displayPlants() {
         System.out.println("\t\t" + gardenName + "\n\n");
-        System.out.println("There are " + plantList.size() + " plant(s) in the garden");
-        System.out.println("Your harvest point: " + harvestPoint);
+        System.out.println("Ada " + plantList.size() + " tanaman di kebun");
+        System.out.println("Poin hasil panen kamu: " + harvestPoint);
 
         for (int i = 0; i < plantList.size(); i++) {
             if (i != plantList.size())
