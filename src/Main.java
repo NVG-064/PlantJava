@@ -14,7 +14,6 @@ public class Main {
             System.out.println("\nMasukkan:");
             System.out.println("1 untuk memberi air");
             System.out.println("2 untuk memberi pupuk");
-            System.out.println("4 untuk memanen tumbuhan");
             System.out.println("5 untuk tanam benih baru");
             System.out.println("7 untuk memanen");
             System.out.println("9 untuk keluar dari program\n");
@@ -30,21 +29,17 @@ public class Main {
                     garden.fertilizePlants(); // Tambah pupuk
                     break;
 
-                case 4:
-                    garden.harvestPlants();
-                    break;
-
                 case 5:
-                    garden.addPlant();
+                    garden.addPlant(); // Tambah tanaman baru
                     break;
 
                 case 7:
-                    garden.harvestPlant();
+                    garden.harvestPlants(); // Panen tanaman
                     break;
                 
                 case 9:
                     sc.close();
-                    System.exit(0); // Exit the program
+                    System.exit(0); // Keluar program
                     break;
             }
         }
