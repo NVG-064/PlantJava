@@ -33,6 +33,15 @@ public class Fruit extends Plant {
         }
     }
 
+    @Override
+    public void printStatus() {
+        System.out.println(displayGrowthStatus() + " (Tahap " + getGrowthStage() + ")\n");
+        if (growthStage > 5)
+            System.out.println("Nama Tanaman    : " + getName() + "\n");
+        System.out.println("Jumlah air      : " + waterCount);
+        System.out.println("Jumlah pupuk    : " + fertilizerCount);
+    }
+
     // Nama Buah
     // Link source:
     // https://id.wikipedia.org/wiki/Daftar_buah-buahan_kulinerF
