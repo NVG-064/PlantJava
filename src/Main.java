@@ -14,9 +14,11 @@ public class Main {
             System.out.println("\nMasukkan:");
             System.out.println("1 untuk memberi air");
             System.out.println("2 untuk memberi pupuk");
+            System.out.println("4 untuk memanen tumbuhan");
             System.out.println("5 untuk tanam benih baru");
             System.out.println("7 untuk keluar dari program\n");
 
+            System.out.print("Input: ");
             int input = sc.nextInt(); // Scan user input
             switch (input) {
                 case 1:
@@ -25,6 +27,10 @@ public class Main {
 
                 case 2:
                     garden.fertilizePlants(); // Tambah pupuk
+                    break;
+
+                case 4:
+                    garden.harvestPlants();
                     break;
 
                 case 5:

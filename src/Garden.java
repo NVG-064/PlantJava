@@ -29,10 +29,10 @@ public class Garden {
         plantList.add(p);
     }
 
-    public void harvestPlant() {
+    public void harvestPlants() {
         int harvestCount = 0;
 
-        for (int i = plantList.size(); i >= 0; --i) {
+        for (int i = plantList.size() - 1; i >= 0; --i) {
             if (plantList.get(i).getGrowthStage() > 4) {
                 harvestCount++;
                 plantList.remove(i);
