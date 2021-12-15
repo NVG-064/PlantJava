@@ -15,7 +15,8 @@ public class Main {
             System.out.println("1 untuk memberi air");
             System.out.println("2 untuk memberi pupuk");
             System.out.println("5 untuk tanam benih baru");
-            System.out.println("7 untuk keluar dari program\n");
+            System.out.println("7 untuk memanen");
+            System.out.println("9 untuk keluar dari program\n");
 
             int input = sc.nextInt(); // Scan user input
             switch (input) {
@@ -32,6 +33,10 @@ public class Main {
                     break;
 
                 case 7:
+                    garden.harvestPlant();
+                    break;
+                
+                case 9:
                     sc.close();
                     System.exit(0); // Exit the program
                     break;
