@@ -1,39 +1,57 @@
 public abstract class Plant {
-    protected int growthStage; // 0-4
+    protected int growthStage;
     protected String plantName;
 
     protected int waterCount;
     protected int fertilizerCount;
 
-    public Plant() { // Constructor
+    // Constructor
+    public Plant() {
         init();
     }
 
+    // Protected methods
     protected void init() {
-        growthStage = 0;
+        growthStage = 1;
         waterCount = 0;
         fertilizerCount = 0;
     }
 
-    public String getPlantName() {
+    protected void validateGrowth() {
+        // cek kecukupan air dan pupuk
+        if (waterCount >= 3 && fertilizerCount >= 1) {
+            onGrow();
+        }
+    }
+
+    protected void onGrow() {
+        if (growthStage < 5) {
+            waterCount -= 3; // Sama seperti waterCount = waterCount - 3
+            fertilizerCount -= 1; // Sama seperti fertilizerCount = fertilizerCount - 1
+            growthStage++;
+        }
+    }
+
+    // Public methods
+    public String getName() {
         return plantName;
     }
 
-    public int getGrowthStatus() {
+    public int getGrowthStage() {
         return growthStage;
     }
 
     public String displayGrowthStatus() {
         switch (growthStage) {
-            case 0:
-                return "Benih";
             case 1:
-                return "Tunas";
+                return "Benih";
             case 2:
-                return "Tanaman Kecil";
+                return "Tunas";
             case 3:
-                return "Tanaman Dewasa";
+                return "Tanaman Kecil";
             case 4:
+                return "Tanaman Dewasa";
+            case 5:
                 return "Berbunga";
         }
         return "Unknown";
@@ -41,46 +59,19 @@ public abstract class Plant {
 
     public void giveWater() {
         waterCount++;
-        checkGrowth();
+        validateGrowth();
     }
 
     public void giveFertilizer() {
         fertilizerCount++;
-        checkGrowth();
+        validateGrowth();
     }
 
-    public void checkGrowth() {
-        // cek kecukupan air dan pupuk
-        if ((waterCount >= 3) && (fertilizerCount >= 1))
-            grow(); // trigger grow()
-    }
-
-    public void grow() {
-        if (growthStage < 4) {
-            waterCount -= 3; // Same as jumlahAir = jumlahAir - 3
-            fertilizerCount -= 1; // Same as jumlahPupuk = jumlahPupuk - 1
-            growthStage++;
-        }
-    }
-
-    public void displayPlant(int flags) {
-        System.out.println(displayGrowthStatus() + " (Tahap " + getGrowthStatus() + ")\n");
-        if ((flags == 0) && (growthStage == 5))
-            System.out.println("Nama Tanaman    : " + getPlantName() + "\n");
-        else if ((flags == 1) && (growthStage == 4))
-            System.out.println("Nama Tanaman    : " + getPlantName() + "\n");
+    public void printStatus() {
+        System.out.println(displayGrowthStatus() + " (Tahap " + getGrowthStage() + ")\n");
+        if (growthStage > 4)
+            System.out.println("Nama Tanaman    : " + getName() + "\n");
         System.out.println("Jumlah air      : " + waterCount);
         System.out.println("Jumlah pupuk    : " + fertilizerCount);
-    }
-
-    public void resetPlant() {
-        init();
-        MyUtils.clearScreen();
-        System.out.print("Tanaman ditebang dan benih baru ditanam");
-        try {
-            Thread.sleep(200);
-        } catch (Exception e) {
-
-        }
     }
 }

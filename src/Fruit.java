@@ -8,24 +8,25 @@ public class Fruit extends Plant {
     @Override
     public String displayGrowthStatus() {
         switch (growthStage) {
-            case 0:
-                return "Benih"; // 0
             case 1:
-                return "Tunas"; // 1
+                return "Benih";
             case 2:
-                return "Tanaman Kecil"; // 2
+                return "Tunas";
             case 3:
-                return "Tanaman Dewasa"; // 3
+                return "Tanaman Kecil";
             case 4:
-                return "Berbunga"; // 4, changes here
+                return "Tanaman Dewasa";
+            case 5:
+                return "Berbunga";
+            case 6:
+                return "Berbuah";
         }
-
-        return "Berbuah"; // 5, changes here
+        return "Unknown";
     }
 
     @Override
-    public void grow() {
-        if (growthStage < 5) { // Changes here
+    protected void onGrow() {
+        if (growthStage < 6) { // Changes here
             waterCount -= 3; // Same as jumlahAir = jumlahAir - 3
             fertilizerCount -= 1; // Same as jumlahPupuk = jumlahPupuk - 1
             growthStage++;
