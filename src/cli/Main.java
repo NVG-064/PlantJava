@@ -1,4 +1,9 @@
+package cli;
+
 import java.util.Scanner; // Import Scanner library
+
+import lib.Garden;
+import utils.MyUtils;
 
 public class Main {
     private static Garden garden;

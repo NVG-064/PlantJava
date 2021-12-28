@@ -1,3 +1,7 @@
+package lib;
+
+import utils.MyUtils;
+
 public class Flower extends Plant {
     public Flower() {
         super();

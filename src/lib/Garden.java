@@ -1,4 +1,8 @@
+package lib;
+
 import java.util.ArrayList;
+
+import utils.MyUtils;
 
 public class Garden {
     private String gardenName;

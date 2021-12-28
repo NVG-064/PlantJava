@@ -1,3 +1,5 @@
+package lib;
+
 public abstract class Plant {
     protected int growthStage;
     protected String plantName;
