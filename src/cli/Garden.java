@@ -1,9 +1,13 @@
-package lib;
+package cli;
 
 import java.util.ArrayList;
 
+import lib.Flower;
+import lib.Fruit;
+import lib.Plant;
 import utils.MyUtils;
 
+@Deprecated
 public class Garden {
     private String gardenName;
     private ArrayList<Plant> plantList;
