@@ -13,8 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lib.Flower;
+import lib.Garden;
 import lib.Plant;
-import utils.GridPaneUtils;
 
 public class App extends Application {
 
@@ -35,11 +35,8 @@ public class App extends Application {
         SELECTED,
     }
 
-    private Plant plantList[][] = new Plant[3][3];
-
+    private Garden garden = new Garden();
     private Button currentButton;
-    private int rowIdx;
-    private int columnIdx;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -53,14 +50,13 @@ public class App extends Application {
 
     public void onPlantClick(ActionEvent event) {
         currentButton = (Button) event.getSource();
-        rowIdx = GridPaneUtils.getRowIndex(currentButton);
-        columnIdx = GridPaneUtils.getColumnIndex(currentButton);
+        garden.setSelectedPlant(currentButton);
         update();
     }
 
     public void addPlant(ActionEvent event) {
         Plant plant = new Flower();
-        plantList[rowIdx][columnIdx] = plant;
+        garden.setSelectedPlantValue(plant);
         currentButton = null;
         update();
     }
@@ -81,21 +77,19 @@ public class App extends Application {
         if (currentButton == null) {
             setPlantMode(PlantMode.UNSELECTED);
         } else {
-            Plant plant = plantList[rowIdx][columnIdx];
-            if (plant == null) {
+            if (garden.getSelectedPlant() == null) {
                 setPlantMode(PlantMode.EMPTY);
                 lblPlantName.setText("Select plant");
             } else {
                 setPlantMode(PlantMode.SELECTED);
-                lblPlantName.setText(plant.getName());
+                lblPlantName.setText(garden.getSelectedPlant().getName());
             }
         }
 
+        // Loops through all the buttons in the grid
         for (Node node : gridPlant.getChildren()) {
             Button btn = (Button) node;
-            int row = GridPaneUtils.getRowIndex(btn);
-            int column = GridPaneUtils.getColumnIndex(btn);
-            Plant plant = plantList[row][column];
+            Plant plant = garden.getPlantInGrid(btn);
             if (plant != null) {
                 btn.setText(plant.getName());
             }
