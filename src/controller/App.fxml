@@ -44,7 +44,7 @@
       </Group>
       <Group fx:id="groupPlantEmpty" disable="true">
          <children>
-            <Button layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#addPlant" text="Add Plant" />
+            <Button layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#onAddPlantClick" text="Add Plant" />
          </children>
       </Group>
    </children>

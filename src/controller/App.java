@@ -40,7 +40,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/layout/App.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/controller/App.fxml"));
 
         Scene scene = new Scene(root);
         primaryStage.setTitle("Garden");
@@ -48,32 +48,41 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    public void onPlantClick(ActionEvent event) {
+    @FXML
+    private void onPlantClick(ActionEvent event) {
         currentButton = (Button) event.getSource();
         garden.setSelectedPlant(currentButton);
         update();
     }
 
-    public void addPlant(ActionEvent event) {
+    @FXML
+    private void onAddPlantClick(ActionEvent event) {
         Plant plant = new Flower();
         garden.setSelectedPlantValue(plant);
         currentButton = null;
         update();
     }
 
-    public void onGiveWaterClick() {
-        System.out.println("onGiveWaterClick");
+    @FXML
+    private void onGiveWaterClick(ActionEvent event) {
+        garden.getSelectedPlant().giveWater();
+        update();
     }
 
-    public void onGiveFertilizerClick() {
-        System.out.println("onGiveFertilizerClick");
+    @FXML
+    private void onGiveFertilizerClick(ActionEvent event) {
+        garden.getSelectedPlant().giveFertilizer();
+        update();
     }
 
-    public void onHarvestClick() {
-        System.out.println("onHarvestClick");
+    @FXML
+    private void onHarvestClick(ActionEvent event) {
+        // Harvest method
+        update();
     }
 
-    public void update() {
+    private void update() {
+        // Set plant mode group
         if (currentButton == null) {
             setPlantMode(PlantMode.UNSELECTED);
         } else {
@@ -92,11 +101,13 @@ public class App extends Application {
             Plant plant = garden.getPlantInGrid(btn);
             if (plant != null) {
                 btn.setText(plant.getName());
+            } else {
+                btn.setText("");
             }
         }
     }
 
-    public void setPlantMode(PlantMode mode) {
+    private void setPlantMode(PlantMode mode) {
         switch (mode) {
             case UNSELECTED:
                 groupPlantEmpty.setDisable(true);
