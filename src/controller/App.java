@@ -51,6 +51,7 @@ public class App extends Application {
     @FXML
     private void onPlantClick(ActionEvent event) {
         currentButton = (Button) event.getSource();
+        currentButton.setDisable(true);
         garden.setSelectedPlant(currentButton);
         update();
     }
@@ -88,7 +89,7 @@ public class App extends Application {
         } else {
             if (garden.getSelectedPlant() == null) {
                 setPlantMode(PlantMode.EMPTY);
-                lblPlantName.setText("Select plant");
+                lblPlantName.setText("Select Plant");
             } else {
                 setPlantMode(PlantMode.SELECTED);
                 lblPlantName.setText(garden.getSelectedPlant().getName());
@@ -99,11 +100,9 @@ public class App extends Application {
         for (Node node : gridPlant.getChildren()) {
             Button btn = (Button) node;
             Plant plant = garden.getPlantInGrid(btn);
-            if (plant != null) {
-                btn.setText(plant.getName());
-            } else {
-                btn.setText("");
-            }
+
+            btn.setText(plant != null ? plant.getName() : "Empty");
+            btn.setDisable(btn == currentButton);
         }
     }
 

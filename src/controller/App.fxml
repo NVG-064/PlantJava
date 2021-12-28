@@ -22,29 +22,29 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.columnIndex="1" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.columnIndex="2" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.rowIndex="1" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.rowIndex="2" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <Label layoutX="616.0" layoutY="111.0" text="Points" />
       <Group fx:id="groupPlantSelected" disable="true">
          <children>
-            <Button layoutX="486.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveWaterClick" text="Give Water" />
-            <Button layoutX="713.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" text="Harvest" />
-            <Button layoutX="589.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveFertilizerClick" text="Give Fertilizer" />
-            <Label fx:id="lblPlantName" layoutX="602.0" layoutY="232.0" text="Plant Name" />
+            <Button focusTraversable="false" layoutX="486.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveWaterClick" text="Give Water" />
+            <Button focusTraversable="false" layoutX="713.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" text="Harvest" />
+            <Button focusTraversable="false" layoutX="589.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveFertilizerClick" text="Give Fertilizer" />
+            <Label fx:id="lblPlantName" layoutX="602.0" layoutY="232.0" text="Select Plant" />
          </children>
       </Group>
       <Group fx:id="groupPlantEmpty" disable="true">
          <children>
-            <Button layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#onAddPlantClick" text="Add Plant" />
+            <Button focusTraversable="false" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#onAddPlantClick" text="Add Plant" />
          </children>
       </Group>
    </children>
