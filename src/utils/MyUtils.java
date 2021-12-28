@@ -1,6 +1,9 @@
 package utils;
 
 public final class MyUtils {
+    private MyUtils() {
+    }
+
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
     }
