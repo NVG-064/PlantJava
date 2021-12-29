@@ -92,7 +92,7 @@ public class App extends Application {
                 lblPlantName.setText("Select Plant");
             } else {
                 setPlantMode(PlantMode.SELECTED);
-                lblPlantName.setText(garden.getSelectedPlant().getName());
+                lblPlantName.setText(garden.getSelectedPlant().displayGrowthStatus());
             }
         }
 
