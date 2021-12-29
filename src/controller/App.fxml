@@ -38,7 +38,7 @@
       <Group fx:id="groupPlantSelected" disable="true">
          <children>
             <Button focusTraversable="false" layoutX="486.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveWaterClick" text="Give Water" />
-            <Button fx:id="harvestButton" focusTraversable="false" layoutX="713.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" text="Harvest" />
+            <Button fx:id="btnHarvest" focusTraversable="false" layoutX="713.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" text="Harvest" />
             <Button focusTraversable="false" layoutX="589.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveFertilizerClick" text="Give Fertilizer" />
             <Label fx:id="lblPlantName" alignment="CENTER" layoutX="602.0" layoutY="238.0" text="Select Plant" />
          </children>
@@ -48,6 +48,6 @@
             <Button focusTraversable="false" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#onAddPlantClick" text="Add Plant" />
          </children>
       </Group>
-      <Text fx:id="textPoint" layoutX="621.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="txtPoints" layoutX="621.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </Pane>

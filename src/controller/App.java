@@ -30,9 +30,9 @@ public class App extends Application {
     @FXML
     private Group groupPlantSelected;
     @FXML
-    private Button harvestButton;
+    private Button btnHarvest;
     @FXML
-    private Text textPoint;
+    private Text txtPoints;
 
     // Field declaration
     enum PlantMode {
@@ -100,9 +100,9 @@ public class App extends Application {
             } else {
                 setPlantMode(PlantMode.SELECTED);
                 lblPlantName.setText(garden.getSelectedPlant().displayGrowthStatus());
-                harvestButton.setDisable(true);
+                btnHarvest.setDisable(true);
                 if (garden.getSelectedPlant().getGrowthStage() > 4) {
-                    harvestButton.setDisable(false);
+                    btnHarvest.setDisable(false);
                 }
             }
         }
