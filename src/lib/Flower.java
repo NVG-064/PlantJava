@@ -5,7 +5,7 @@ import utils.MyUtils;
 public class Flower extends Plant {
     public Flower() {
         super();
-        int index = MyUtils.generateRandomInt(0, flowerList.length);
+        int index = MyUtils.generateRandomInt(0, flowerList.length-1);
         plantName = flowerList[index];
     }
 
