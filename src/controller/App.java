@@ -103,7 +103,7 @@ public class App extends Application {
         if (cBoxPlant.getValue() == null)
             return;
 
-        Plant plant = (Plant) Class.forName("lib." + cBoxPlant.getValue()).getDeclaredConstructor().newInstance();
+        Plant plant = (Plant) Class.forName("lib.Plants." + cBoxPlant.getValue()).getDeclaredConstructor().newInstance();
         garden.setSelectedPlantValue(plant);
         update();
     }

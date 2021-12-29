@@ -1,4 +1,6 @@
-package lib;
+package lib.Plants;
+
+import lib.Plant;
 
 public class Hydrangea extends Plant {
     public Hydrangea() {
