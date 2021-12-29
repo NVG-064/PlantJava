@@ -21,9 +21,13 @@ public class App extends Application {
 
     // Injected fxml id
     @FXML
-    private Label lblPlantName;
+    private Label lblTotalPoints;
     @FXML
-    private Label lblPointValue;
+    private Label lblPlantStage;
+    @FXML
+    private Label lblWaterCount;
+    @FXML
+    private Label lblFertilizerCount;
     @FXML
     private GridPane gridPlant;
     @FXML
@@ -92,19 +96,27 @@ public class App extends Application {
     }
 
     private void update() {
-        lblPointValue.setText(points.toString());
+        lblTotalPoints.setText(points.toString());
 
         // Set plant mode group
         if (selectedButton == null) {
             setPlantMode(PlantMode.UNSELECTED);
         } else {
-            if (garden.getSelectedPlant() == null) {
+            Plant selectedPlant = garden.getSelectedPlant();
+            if (selectedPlant == null) {
                 setPlantMode(PlantMode.EMPTY);
-                lblPlantName.setText("Select Plant");
+
+                lblPlantStage.setText("-");
+                lblWaterCount.setText("-");
+                lblFertilizerCount.setText("-");
             } else {
                 setPlantMode(PlantMode.SELECTED);
-                lblPlantName.setText(garden.getSelectedPlant().displayGrowthStatus());
-                btnHarvest.setDisable(!garden.getSelectedPlant().isMature());
+
+                lblPlantStage.setText(selectedPlant.displayGrowthStatus());
+                lblWaterCount.setText(selectedPlant.getWaterCount().toString());
+                lblFertilizerCount.setText(selectedPlant.getFertilizerCount().toString());
+
+                btnHarvest.setDisable(!selectedPlant.isMature());
             }
         }
 

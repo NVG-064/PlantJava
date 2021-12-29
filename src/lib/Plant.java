@@ -2,10 +2,10 @@ package lib;
 
 public abstract class Plant {
     protected String plantName;
-    protected int growthStage;
+    protected Integer growthStage;
 
-    protected int waterCount;
-    protected int fertilizerCount;
+    protected Integer waterCount;
+    protected Integer fertilizerCount;
 
     // Constructor
     public Plant() {
@@ -29,7 +29,7 @@ public abstract class Plant {
         return plantName;
     }
 
-    public int getGrowthStage() {
+    public Integer getGrowthStage() {
         return growthStage;
     }
 
@@ -61,11 +61,11 @@ public abstract class Plant {
         validateGrowth();
     }
 
-    public int getWaterCount() {
+    public Integer getWaterCount() {
         return waterCount;
     }
 
-    public int getFertilizerCount() {
+    public Integer getFertilizerCount() {
         return fertilizerCount;
     }
 }
