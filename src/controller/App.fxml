@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
 <?import javafx.geometry.*?>
@@ -37,9 +38,9 @@
       <Group fx:id="groupPlantSelected" disable="true">
          <children>
             <Button focusTraversable="false" layoutX="486.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveWaterClick" text="Give Water" />
-            <Button focusTraversable="false" layoutX="713.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" text="Harvest" />
+            <Button fx:id="harvestButton" focusTraversable="false" layoutX="713.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" text="Harvest" />
             <Button focusTraversable="false" layoutX="589.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveFertilizerClick" text="Give Fertilizer" />
-            <Label fx:id="lblPlantName" layoutX="602.0" layoutY="232.0" text="Select Plant" />
+            <Label fx:id="lblPlantName" alignment="CENTER" layoutX="602.0" layoutY="232.0" text="Select Plant" />
          </children>
       </Group>
       <Group fx:id="groupPlantEmpty" disable="true">
@@ -47,5 +48,6 @@
             <Button focusTraversable="false" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#onAddPlantClick" text="Add Plant" />
          </children>
       </Group>
+      <Text layoutX="621.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </Pane>

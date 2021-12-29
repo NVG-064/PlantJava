@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import lib.Flower;
 import lib.Garden;
@@ -27,6 +28,10 @@ public class App extends Application {
     private Group groupPlantEmpty;
     @FXML
     private Group groupPlantSelected;
+    @FXML
+    private Button harvestButton;
+    @FXML
+    private Text textPoint;
 
     // Field declaration
     enum PlantMode {
@@ -93,6 +98,10 @@ public class App extends Application {
             } else {
                 setPlantMode(PlantMode.SELECTED);
                 lblPlantName.setText(garden.getSelectedPlant().displayGrowthStatus());
+                harvestButton.setDisable(true);
+                if (garden.getSelectedPlant().getGrowthStage() > 4) {
+                    harvestButton.setDisable(false);
+                }
             }
         }
 
