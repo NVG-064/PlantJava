@@ -50,7 +50,7 @@ public class App extends Application {
 
         Scene scene = new Scene(root);
         primaryStage.setTitle("Garden");
-        primaryStage.getIcons().add(new Image("/launcher.jpg"));
+        primaryStage.getIcons().add(new Image("images/launcher.jpg"));
         primaryStage.setScene(scene);
         primaryStage.show();
     }
