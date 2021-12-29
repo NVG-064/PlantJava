@@ -17,8 +17,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lib.Garden;
 import lib.Plant;
-import lib.Rose;
-import lib.Sunflower;
 
 public class App extends Application {
 
@@ -78,17 +76,12 @@ public class App extends Application {
     }
 
     @FXML
-    private void onAddPlantClick(ActionEvent event) {
+    private void onAddPlantClick(ActionEvent event) throws Exception {
         if (cBoxPlant.getValue() == null)
             return;
-        switch (cBoxPlant.getValue()) {
-            case "Rose":
-                garden.setSelectedPlantValue(new Rose());
-                break;
-            case "Sunflower":
-                garden.setSelectedPlantValue(new Sunflower());
-                break;
-        }
+
+        Plant plant = (Plant) Class.forName("lib." + cBoxPlant.getValue()).getDeclaredConstructor().newInstance();
+        garden.setSelectedPlantValue(plant);
         update();
     }
 
