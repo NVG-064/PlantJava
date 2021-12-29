@@ -64,6 +64,7 @@ public class App extends Application {
 
     @FXML
     private void onAddPlantClick(ActionEvent event) {
+        // TODO: Open dialog to add plant
         Plant plant = new Flower();
         garden.setSelectedPlantValue(plant);
         currentButton = null;
@@ -99,10 +100,7 @@ public class App extends Application {
             } else {
                 setPlantMode(PlantMode.SELECTED);
                 lblPlantName.setText(garden.getSelectedPlant().displayGrowthStatus());
-                btnHarvest.setDisable(true);
-                if (garden.getSelectedPlant().getGrowthStage() > 4) {
-                    btnHarvest.setDisable(false);
-                }
+                btnHarvest.setDisable(!garden.getSelectedPlant().isMature());
             }
         }
 
