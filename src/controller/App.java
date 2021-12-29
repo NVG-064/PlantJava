@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import lib.Flower;
 import lib.Garden;
@@ -24,6 +23,8 @@ public class App extends Application {
     @FXML
     private Label lblPlantName;
     @FXML
+    private Label lblPointValue;
+    @FXML
     private GridPane gridPlant;
     @FXML
     private Group groupPlantEmpty;
@@ -31,8 +32,6 @@ public class App extends Application {
     private Group groupPlantSelected;
     @FXML
     private Button btnHarvest;
-    @FXML
-    private Text txtPoints;
 
     // Field declaration
     enum PlantMode {
