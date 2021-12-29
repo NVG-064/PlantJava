@@ -1,7 +1,6 @@
 package lib;
 
 public abstract class Plant {
-    protected String plantName;
     protected Integer growthStage;
 
     protected Integer waterCount;
@@ -26,7 +25,7 @@ public abstract class Plant {
 
     // Public methods
     public String getName() {
-        return plantName;
+        return this.getClass().getSimpleName();
     }
 
     public String getGrowthStage() {

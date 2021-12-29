@@ -52,6 +52,29 @@ public class App extends Application {
     private Integer points = 0;
 
     private final String plantNames[] = {
+            "Alternanthera",
+            "Amaryllis",
+            "Aster",
+            "Azalea",
+            "Canna",
+            "Crinum",
+            "Crocus",
+            "Dahlia",
+            "Datura",
+            "DiospyrosMacrophylla",
+            "Episcia",
+            "Euphorbia",
+            "Gaillardia",
+            "Gardenia",
+            "Geranium",
+            "Gerbera",
+            "Helianthus",
+            "Hydrangea",
+            "Hymenocallis",
+            "Jacaranda",
+            "Kimilsungia",
+            "Orchidaceae",
+            "Peony",
             "Rose",
             "Sunflower"
     };

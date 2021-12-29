@@ -6,7 +6,7 @@ public class Flower extends Plant {
     public Flower() {
         super();
         int index = MyUtils.generateRandomInt(0, flowerList.length - 1);
-        plantName = flowerList[index];
+        //plantName = flowerList[index];
     }
 
     // Nama Bunga
