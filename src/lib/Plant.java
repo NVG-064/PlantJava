@@ -29,11 +29,7 @@ public abstract class Plant {
         return plantName;
     }
 
-    public Integer getGrowthStage() {
-        return growthStage;
-    }
-
-    public String displayGrowthStatus() {
+    public String getGrowthStage() {
         switch (growthStage) {
             case 1:
                 return "Benih";

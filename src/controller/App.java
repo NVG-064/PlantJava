@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,13 +10,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import lib.Flower;
 import lib.Garden;
 import lib.Plant;
+import lib.Rose;
+import lib.Sunflower;
 
 public class App extends Application {
 
@@ -36,6 +39,8 @@ public class App extends Application {
     private Group groupPlantSelected;
     @FXML
     private Button btnHarvest;
+    @FXML
+    private ComboBox<String> cBoxPlant;
 
     // Field declaration
     enum PlantMode {
@@ -47,6 +52,11 @@ public class App extends Application {
     private Garden garden = new Garden();
     private Button selectedButton;
     private Integer points = 0;
+
+    private final String plantNames[] = {
+            "Rose",
+            "Sunflower"
+    };
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -69,9 +79,16 @@ public class App extends Application {
 
     @FXML
     private void onAddPlantClick(ActionEvent event) {
-        // TODO: Open dialog to add plant
-        Plant plant = new Flower();
-        garden.setSelectedPlantValue(plant);
+        if (cBoxPlant.getValue() == null)
+            return;
+        switch (cBoxPlant.getValue()) {
+            case "Rose":
+                garden.setSelectedPlantValue(new Rose());
+                break;
+            case "Sunflower":
+                garden.setSelectedPlantValue(new Sunflower());
+                break;
+        }
         update();
     }
 
@@ -96,8 +113,9 @@ public class App extends Application {
     }
 
     private void update() {
-        lblTotalPoints.setText(points.toString());
+        cBoxPlant.setItems(FXCollections.observableArrayList(plantNames));
 
+        lblTotalPoints.setText(points.toString());
         // Set plant mode group
         if (selectedButton == null) {
             setPlantMode(PlantMode.UNSELECTED);
@@ -112,7 +130,7 @@ public class App extends Application {
             } else {
                 setPlantMode(PlantMode.SELECTED);
 
-                lblPlantStage.setText(selectedPlant.displayGrowthStatus());
+                lblPlantStage.setText(selectedPlant.getGrowthStage());
                 lblWaterCount.setText(selectedPlant.getWaterCount().toString());
                 lblFertilizerCount.setText(selectedPlant.getFertilizerCount().toString());
 
