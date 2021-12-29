@@ -41,7 +41,8 @@ public class App extends Application {
     }
 
     private Garden garden = new Garden();
-    private Button currentButton;
+    private Button selectedButton;
+    private Integer points = 0;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -56,9 +57,9 @@ public class App extends Application {
 
     @FXML
     private void onPlantClick(ActionEvent event) {
-        currentButton = (Button) event.getSource();
-        currentButton.setDisable(true);
-        garden.setSelectedPlant(currentButton);
+        selectedButton = (Button) event.getSource();
+        selectedButton.setDisable(true);
+        garden.setSelectedPlant(selectedButton);
         update();
     }
 
@@ -67,7 +68,6 @@ public class App extends Application {
         // TODO: Open dialog to add plant
         Plant plant = new Flower();
         garden.setSelectedPlantValue(plant);
-        currentButton = null;
         update();
     }
 
@@ -85,13 +85,17 @@ public class App extends Application {
 
     @FXML
     private void onHarvestClick(ActionEvent event) {
-        // Harvest method
+        garden.setSelectedPlantValue(null);
+        points += 10;
+        selectedButton = null;
         update();
     }
 
     private void update() {
+        lblPointValue.setText(points.toString());
+
         // Set plant mode group
-        if (currentButton == null) {
+        if (selectedButton == null) {
             setPlantMode(PlantMode.UNSELECTED);
         } else {
             if (garden.getSelectedPlant() == null) {
@@ -110,7 +114,7 @@ public class App extends Application {
             Plant plant = garden.getPlantInGrid(btn);
 
             btn.setText(plant != null ? plant.getName() : "Empty");
-            btn.setDisable(btn == currentButton);
+            btn.setDisable(btn == selectedButton);
         }
     }
 
