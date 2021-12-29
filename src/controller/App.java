@@ -100,10 +100,10 @@ public class App extends Application {
 
     @FXML
     private void onAddPlantClick(ActionEvent event) throws Exception {
-        if (cBoxPlant.getValue() == null)
+        String plantName = cBoxPlant.getValue();
+        if (plantName == null)
             return;
-
-        Plant plant = (Plant) Class.forName("lib.Plants." + cBoxPlant.getValue()).getDeclaredConstructor().newInstance();
+        Plant plant = (Plant) Class.forName("lib.Plants." + plantName).getDeclaredConstructor().newInstance();
         garden.setSelectedPlantValue(plant);
         update();
     }
@@ -132,6 +132,10 @@ public class App extends Application {
         cBoxPlant.setItems(FXCollections.observableArrayList(plantNames));
 
         lblTotalPoints.setText(points.toString());
+        lblPlantStage.setText("-");
+        lblWaterCount.setText("-");
+        lblFertilizerCount.setText("-");
+
         // Set plant mode group
         if (selectedButton == null) {
             setPlantMode(PlantMode.UNSELECTED);
@@ -139,10 +143,6 @@ public class App extends Application {
             Plant selectedPlant = garden.getSelectedPlant();
             if (selectedPlant == null) {
                 setPlantMode(PlantMode.EMPTY);
-
-                lblPlantStage.setText("-");
-                lblWaterCount.setText("-");
-                lblFertilizerCount.setText("-");
             } else {
                 setPlantMode(PlantMode.SELECTED);
 
