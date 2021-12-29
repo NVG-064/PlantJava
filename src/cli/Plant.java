@@ -1,5 +1,6 @@
-package lib;
+package cli;
 
+@Deprecated
 public abstract class Plant {
     protected int growthStage;
     protected String plantName;

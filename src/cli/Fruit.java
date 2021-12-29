@@ -1,7 +1,8 @@
-package lib;
+package cli;
 
 import utils.MyUtils;
 
+@Deprecated
 public class Fruit extends Plant {
     public Fruit() {
         super();

@@ -2,9 +2,6 @@ package cli;
 
 import java.util.ArrayList;
 
-import lib.Flower;
-import lib.Fruit;
-import lib.Plant;
 import utils.MyUtils;
 
 @Deprecated
