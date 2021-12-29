@@ -9,16 +9,12 @@ public abstract class Plant {
 
     // Constructor
     public Plant() {
-        init();
-    }
-
-    // Protected methods
-    protected void init() {
         growthStage = 1;
         waterCount = 0;
         fertilizerCount = 0;
     }
 
+    // Protected methods
     protected void validateGrowth() {
         // cek kecukupan air dan pupuk
         if (waterCount >= 3 && fertilizerCount >= 1) {
