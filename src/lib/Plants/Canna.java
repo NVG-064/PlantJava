@@ -6,4 +6,13 @@ public class Canna extends Plant {
     public Canna() {
         super();
     }
+
+    @Override
+    protected void validateGrowth() {
+        if (waterCount >= 6 && fertilizerCount >= 3) {
+            waterCount -= 6;
+            fertilizerCount -= 3;
+            growthStage++;
+        }
+    }
 }

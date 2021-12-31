@@ -6,4 +6,13 @@ public class Crocus extends Plant {
     public Crocus() {
         super();
     }
+
+    @Override
+    protected void validateGrowth() {
+        if (waterCount >= 4 && fertilizerCount >= 1) {
+            waterCount -= 4;
+            fertilizerCount -= 1;
+            growthStage++;
+        }
+    }
 }
