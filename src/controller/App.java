@@ -61,7 +61,6 @@ public class App extends Application {
             "Crocus",
             "Dahlia",
             "Datura",
-            "DiospyrosMacrophylla",
             "Episcia",
             "Euphorbia",
             "Gaillardia",
