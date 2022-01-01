@@ -14,6 +14,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import lib.Garden;
 import lib.Plant;
@@ -36,9 +37,13 @@ public class App extends Application {
     @FXML
     private Group groupPlantSelected;
     @FXML
+    private Button btnExit;
+    @FXML
     private Button btnHarvest;
     @FXML
     private ComboBox<String> cBoxPlant;
+    @FXML
+    private Pane mainPane;
 
     // Field declaration
     enum PlantMode {
@@ -126,6 +131,14 @@ public class App extends Application {
         points += 10;
         selectedButton = null;
         update();
+    }
+
+    @FXML
+    private void onExitClick(ActionEvent event) {
+        Stage stage;
+
+        stage = (Stage) mainPane.getScene().getWindow();
+        stage.close();
     }
 
     private void update() {
