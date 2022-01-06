@@ -148,24 +148,6 @@ public class App extends Application {
         lblWaterCount.setText("-");
         lblFertilizerCount.setText("-");
 
-        // Set plant mode group
-        if (selectedButton == null) {
-            setPlantMode(PlantMode.UNSELECTED);
-        } else {
-            Plant selectedPlant = garden.getSelectedPlant();
-            if (selectedPlant == null) {
-                setPlantMode(PlantMode.EMPTY);
-            } else {
-                setPlantMode(PlantMode.SELECTED);
-
-                lblPlantStage.setText(selectedPlant.getGrowthStage());
-                lblWaterCount.setText(selectedPlant.getWaterCount().toString());
-                lblFertilizerCount.setText(selectedPlant.getFertilizerCount().toString());
-
-                btnHarvest.setDisable(!selectedPlant.isMature());
-            }
-        }
-
         // Loops through all the buttons in the grid
         for (Node node : gridPlant.getChildren()) {
             Button btn = (Button) node;
@@ -174,6 +156,28 @@ public class App extends Application {
             btn.setText(plant != null ? plant.getName() : "Empty");
             btn.setDisable(btn == selectedButton);
         }
+
+        // Set plant mode group
+        if (selectedButton == null) {
+            setPlantMode(PlantMode.UNSELECTED);
+            return;
+        }
+
+        Plant selectedPlant = garden.getSelectedPlant();
+        if (selectedPlant == null) {
+            setPlantMode(PlantMode.EMPTY);
+            return;
+        }
+
+        setPlantMode(PlantMode.SELECTED);
+        lblPlantStage.setText(selectedPlant.getGrowthStage());
+        lblWaterCount.setText(selectedPlant.getWaterCount().toString());
+        lblFertilizerCount.setText(selectedPlant.getFertilizerCount().toString());
+
+        if (selectedPlant.isMature()) {
+            setPlantMode(PlantMode.UNSELECTED);
+            btnHarvest.setDisable(false);
+        }
     }
 
     private void setPlantMode(PlantMode mode) {
@@ -181,14 +185,17 @@ public class App extends Application {
             case UNSELECTED:
                 groupPlantEmpty.setDisable(true);
                 groupPlantSelected.setDisable(true);
+                btnHarvest.setDisable(true);
                 break;
             case EMPTY:
                 groupPlantEmpty.setDisable(false);
                 groupPlantSelected.setDisable(true);
+                btnHarvest.setDisable(true);
                 break;
             case SELECTED:
                 groupPlantEmpty.setDisable(true);
                 groupPlantSelected.setDisable(false);
+                btnHarvest.setDisable(true);
                 break;
 
         }

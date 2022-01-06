@@ -241,23 +241,23 @@
                   <Insets />
                </opaqueInsets>
             </VBox>
+            <Button fx:id="btnHarvest" disable="true" focusTraversable="false" layoutX="251.0" layoutY="199.0" mnemonicParsing="false" onAction="#onHarvestClick" prefHeight="50.0" prefWidth="96.0" text="Harvest" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@drawables/harvest.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
             <Group fx:id="groupPlantSelected" disable="true" layoutX="-441.0" layoutY="-97.0">
                <children>
-                  <Button fx:id="btnHarvest" focusTraversable="false" layoutX="692.0" layoutY="296.0" mnemonicParsing="false" onAction="#onHarvestClick" prefHeight="50.0" prefWidth="96.0" text="Harvest" wrapText="true">
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@drawables/harvest.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Segoe UI Semibold" size="12.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
                   <Button focusTraversable="false" layoutX="486.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveWaterClick" prefHeight="50.0" prefWidth="96.0" text="Give Water" wrapText="true">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
