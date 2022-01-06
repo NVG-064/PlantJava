@@ -57,7 +57,6 @@ public class App extends Application {
     private Integer points = 0;
 
     private final String plantNames[] = {
-            "Alternanthera",
             "Amaryllis",
             "Aster",
             "Azalea",
