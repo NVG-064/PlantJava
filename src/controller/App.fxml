@@ -24,6 +24,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btnExit" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#onExitClick" prefHeight="57.0" prefWidth="262.0" style="-fx-background-color: #FFFFFF;" text="Exit" textFill="#32db9a">
                <font>
@@ -36,6 +39,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="262.0" style="-fx-background-color: #FFFFFF;" textFill="#32db9a">
                <font>
@@ -56,6 +62,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children></VBox>
       <Pane prefHeight="213.0" prefWidth="1031.0" style="-fx-background-color: #32DB9A;">
@@ -104,46 +113,73 @@
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" mnemonicParsing="false" onAction="#onPlantClick" prefHeight="104.0" prefWidth="104.0" text="Empty" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </GridPane>
@@ -218,6 +254,9 @@
                      <font>
                         <Font name="Segoe UI Semibold" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" layoutX="486.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveWaterClick" prefHeight="50.0" prefWidth="96.0" text="Give Water" wrapText="true">
                      <graphic>
@@ -230,6 +269,9 @@
                      <font>
                         <Font name="Segoe UI Semibold" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button focusTraversable="false" layoutX="589.0" layoutY="296.0" mnemonicParsing="false" onAction="#onGiveFertilizerClick" prefHeight="50.0" prefWidth="96.0" text="Give Fertilizer" wrapText="true">
                      <graphic>
@@ -242,12 +284,18 @@
                      <font>
                         <Font name="Segoe UI Semibold" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </Group>
             <Group fx:id="groupPlantEmpty" disable="true" layoutX="-351.0" layoutY="-87.0">
                <children>
-                  <ComboBox fx:id="cBoxPlant" focusTraversable="false" layoutX="395.0" layoutY="376.0" prefHeight="32.0" prefWidth="194.0" promptText="Select Plant" />
+                  <ComboBox fx:id="cBoxPlant" focusTraversable="false" layoutX="395.0" layoutY="376.0" prefHeight="32.0" prefWidth="194.0" promptText="Select Plant">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
                   <Button focusTraversable="false" layoutX="602.0" layoutY="376.0" mnemonicParsing="false" onAction="#onAddPlantClick" prefHeight="32.0" prefWidth="96.0" text="Add Plant">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -259,6 +307,9 @@
                      <font>
                         <Font name="Segoe UI Semibold" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </Group>
