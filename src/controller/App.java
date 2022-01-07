@@ -1,5 +1,6 @@
 package controller;
 
+import java.time.LocalDateTime;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -44,6 +45,10 @@ public class App extends Application {
     private ComboBox<String> cBoxPlant;
     @FXML
     private Pane mainPane;
+    @FXML
+    private Label lblGreetings;
+    @FXML
+    private Label lblGoodText;
 
     // Field declaration
     enum PlantMode {
@@ -178,6 +183,8 @@ public class App extends Application {
             setPlantMode(PlantMode.UNSELECTED);
             btnHarvest.setDisable(false);
         }
+
+        getTimeAndSetGreetings();
     }
 
     private void setPlantMode(PlantMode mode) {
@@ -198,6 +205,31 @@ public class App extends Application {
                 btnHarvest.setDisable(true);
                 break;
 
+        }
+    }
+
+    private void getTimeAndSetGreetings() {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        int hour = localDateTime.getHour();
+        int minute = localDateTime.getMinute();
+        hour = 18;
+        minute = 00;
+        setGreeting(hour, minute);
+    }
+
+    private void setGreeting(int hour, int minute) {
+        lblGoodText.setVisible(true);
+        if ((hour >= 18 && hour <= 23) && (minute >= 0 && minute <= 59)) {
+            lblGreetings.setText("Night");
+        }
+        else if ((hour >= 0 && hour <= 11) && (minute >= 0 && minute <= 59)) {
+            lblGreetings.setText("Morning");
+        }
+        else if ((hour >= 12 && hour <= 14) && (minute >= 0 && minute <= 59)) {
+            lblGreetings.setText("Afternoon");
+        }
+        else if ((hour >= 15 && hour <= 17) && (minute >= 0 && minute <= 59)) {
+            lblGreetings.setText("Evening");
         }
     }
 }
