@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -49,6 +50,8 @@ public class App extends Application {
     private Label lblGreetings;
     @FXML
     private Label lblGoodText;
+    @FXML
+    private ImageView ivGreetings;
 
     // Field declaration
     enum PlantMode {
@@ -212,8 +215,6 @@ public class App extends Application {
         LocalDateTime localDateTime = LocalDateTime.now();
         int hour = localDateTime.getHour();
         int minute = localDateTime.getMinute();
-        hour = 18;
-        minute = 00;
         setGreeting(hour, minute);
     }
 
@@ -221,15 +222,23 @@ public class App extends Application {
         lblGoodText.setVisible(true);
         if ((hour >= 18 && hour <= 23) && (minute >= 0 && minute <= 59)) {
             lblGreetings.setText("Night");
+            Image nightImage = new Image("controller/drawables/night.png");
+            ivGreetings.setImage(nightImage);
         }
         else if ((hour >= 0 && hour <= 11) && (minute >= 0 && minute <= 59)) {
             lblGreetings.setText("Morning");
+            Image morningImage = new Image("controller/drawables/morning.png");
+            ivGreetings.setImage(morningImage);
         }
         else if ((hour >= 12 && hour <= 14) && (minute >= 0 && minute <= 59)) {
             lblGreetings.setText("Afternoon");
+            Image afternoonImage = new Image("controller/drawables/afternoon.png");
+            ivGreetings.setImage(afternoonImage);
         }
         else if ((hour >= 15 && hour <= 17) && (minute >= 0 && minute <= 59)) {
             lblGreetings.setText("Evening");
+            Image eveningImage = new Image("controller/drawables/evening.png");
+            ivGreetings.setImage(eveningImage);
         }
     }
 }

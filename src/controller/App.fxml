@@ -103,6 +103,7 @@
                   <Font name="Segoe UI" size="30.0" />
                </font>
             </Label>
+            <ImageView fx:id="ivGreetings" fitHeight="51.0" fitWidth="57.0" layoutX="871.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
       <Pane cache="true" cacheHint="SCALE_AND_ROTATE" layoutX="264.0" layoutY="150.0" prefHeight="366.0" prefWidth="354.0" style="-fx-background-color: #F5F5F5;">
