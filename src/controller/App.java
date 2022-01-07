@@ -1,5 +1,6 @@
 package controller;
 
+//import java.io.IOException;
 import java.time.LocalDateTime;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -147,6 +148,29 @@ public class App extends Application {
         stage = (Stage) mainPane.getScene().getWindow();
         stage.close();
     }
+
+    /*
+     * This things disabled due to bugs
+     * on switching scenes
+     * 
+    @FXML
+    private void onAboutClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/controller/About.fxml"));
+        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void onHomeClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/controller/App.fxml"));
+        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    */
 
     private void update() {
         cBoxPlant.setItems(FXCollections.observableArrayList(plantNames));
