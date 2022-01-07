@@ -192,7 +192,7 @@
       </Pane>
       <Pane layoutX="628.0" layoutY="150.0" prefHeight="366.0" prefWidth="389.0" style="-fx-background-color: #F5F5F5;">
          <children>
-            <VBox layoutX="44.0" layoutY="64.0" prefHeight="96.0" prefWidth="302.0">
+            <VBox layoutX="76.0" layoutY="64.0" prefHeight="96.0" prefWidth="271.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="32.0">
                      <children>
@@ -318,6 +318,33 @@
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Label>
+            <VBox layoutX="44.0" layoutY="66.0" prefHeight="32.0" prefWidth="28.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@drawables/plant_stage.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="44.0" layoutY="96.0" prefHeight="32.0" prefWidth="28.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@drawables/water_count.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="44.0" layoutY="128.0" prefHeight="32.0" prefWidth="28.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@drawables/fertilizer_count.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
          </children>
       </Pane>
    </children>
