@@ -53,6 +53,8 @@ public class App extends Application {
     private Label lblGoodText;
     @FXML
     private ImageView ivGreetings;
+    @FXML
+    private Label lblWelcome;
 
     // Field declaration
     enum PlantMode {
@@ -243,7 +245,9 @@ public class App extends Application {
     }
 
     private void setGreeting(int hour, int minute) {
+        lblWelcome.setVisible(false);
         lblGoodText.setVisible(true);
+        lblGreetings.setVisible(true);
         if ((hour >= 18 && hour <= 23) && (minute >= 0 && minute <= 59)) {
             lblGreetings.setText("Night");
             Image nightImage = new Image("controller/drawables/night.png");

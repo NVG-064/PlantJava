@@ -88,22 +88,27 @@
                   <Image url="@drawables/points.png" />
                </image>
             </ImageView>
-            <Label layoutX="38.0" layoutY="14.0" prefHeight="51.0" prefWidth="211.0" text="GARDEN" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="15.0" prefHeight="51.0" prefWidth="211.0" text="GARDEN" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="lblGoodText" layoutX="627.0" layoutY="56.0" prefHeight="51.0" prefWidth="78.0" text="Good" textFill="WHITE" visible="false">
+            <Label fx:id="lblGoodText" layoutX="699.0" layoutY="60.0" prefHeight="51.0" prefWidth="78.0" text="Good" textFill="WHITE" visible="false">
                <font>
                   <Font name="Segoe UI" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="lblGreetings" layoutX="708.0" layoutY="56.0" prefHeight="51.0" prefWidth="163.0" text="Welcome" textFill="WHITE">
+            <Label fx:id="lblGreetings" layoutX="779.0" layoutY="60.0" prefHeight="51.0" prefWidth="163.0" textFill="WHITE" visible="false">
                <font>
                   <Font name="Segoe UI" size="30.0" />
                </font>
             </Label>
-            <ImageView fx:id="ivGreetings" fitHeight="51.0" fitWidth="57.0" layoutX="871.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ivGreetings" fitHeight="51.0" fitWidth="57.0" layoutX="960.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblWelcome" layoutX="860.0" layoutY="60.0" prefHeight="51.0" prefWidth="136.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="30.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane cache="true" cacheHint="SCALE_AND_ROTATE" layoutX="264.0" layoutY="150.0" prefHeight="366.0" prefWidth="354.0" style="-fx-background-color: #F5F5F5;">
