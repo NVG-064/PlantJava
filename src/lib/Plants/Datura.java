@@ -5,6 +5,7 @@ import lib.Plant;
 public class Datura extends Plant {
     public Datura() {
         super();
+        point = 70;
     }
 
     @Override

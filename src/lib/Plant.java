@@ -12,7 +12,7 @@ public abstract class Plant {
         growthStage = 1;
         waterCount = 0;
         fertilizerCount = 0;
-        point = 30;
+        point = 55;
     }
 
     // Protected methods

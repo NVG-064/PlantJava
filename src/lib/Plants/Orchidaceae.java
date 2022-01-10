@@ -5,6 +5,7 @@ import lib.Plant;
 public class Orchidaceae extends Plant {
     public Orchidaceae() {
         super();
+        point = 25;
     }
 
     @Override

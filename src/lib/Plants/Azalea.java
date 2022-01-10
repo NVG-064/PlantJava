@@ -5,6 +5,7 @@ import lib.Plant;
 public class Azalea extends Plant {
     public Azalea() {
         super();
+        // same as default
     }
 
     @Override

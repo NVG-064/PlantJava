@@ -5,6 +5,7 @@ import lib.Plant;
 public class Euphorbia extends Plant {
     public Euphorbia() {
         super();
+        point = 150;
     }
 
     @Override

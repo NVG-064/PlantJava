@@ -5,6 +5,7 @@ import lib.Plant;
 public class Hymenocallis extends Plant {
     public Hymenocallis() {
         super();
+        // same as default
     }
 
     @Override

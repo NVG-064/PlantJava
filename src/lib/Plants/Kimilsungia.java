@@ -5,6 +5,7 @@ import lib.Plant;
 public class Kimilsungia extends Plant {
     public Kimilsungia() {
         super();
+        point = 110;
     }
 
     @Override

@@ -5,6 +5,7 @@ import lib.Plant;
 public class Geranium extends Plant {
     public Geranium() {
         super();
+        point = 70;
     }
 
     @Override

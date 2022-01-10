@@ -5,6 +5,7 @@ import lib.Plant;
 public class Episcia extends Plant {
     public Episcia() {
         super();
+        point = 150;
     }
 
     @Override

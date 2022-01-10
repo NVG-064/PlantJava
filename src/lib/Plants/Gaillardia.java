@@ -5,6 +5,7 @@ import lib.Plant;
 public class Gaillardia extends Plant {
     public Gaillardia() {
         super();
+        // 50 - 20 + 20, same as default
     }
 
     @Override
