@@ -137,8 +137,8 @@ public class App extends Application {
 
     @FXML
     private void onHarvestClick(ActionEvent event) {
+        points += garden.getSelectedPlant().getBonus();
         garden.setSelectedPlantValue(null);
-        points += 10;
         selectedButton = null;
         update();
     }

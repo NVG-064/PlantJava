@@ -5,12 +5,14 @@ public abstract class Plant {
 
     protected Integer waterCount;
     protected Integer fertilizerCount;
+    protected Integer point;
 
     // Constructor
     public Plant() {
         growthStage = 1;
         waterCount = 0;
         fertilizerCount = 0;
+        point = 30;
     }
 
     // Protected methods
@@ -62,5 +64,9 @@ public abstract class Plant {
 
     public Integer getFertilizerCount() {
         return fertilizerCount;
+    }
+
+    public Integer getBonus() {
+        return point;
     }
 }
