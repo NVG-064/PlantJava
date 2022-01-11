@@ -16,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -58,11 +59,11 @@ public class App extends Application {
     @FXML
     private Pane aboutPane;
     @FXML
+    private Pane aboutPane2;
+    @FXML
     private Pane homePane;
     @FXML
     private Pane homePane2;
-    @FXML
-    private ScrollPane aboutScrollPane;
 
     // Field declaration
     enum PlantMode {
@@ -187,7 +188,7 @@ public class App extends Application {
         homePane.setVisible(false);
         homePane2.setVisible(false);
         aboutPane.setVisible(true);
-        //aboutScrollPane.setVisible(true);
+        aboutPane2.setVisible(true);
     }
 
     @FXML
@@ -195,7 +196,7 @@ public class App extends Application {
         homePane.setVisible(true);
         homePane2.setVisible(true);
         aboutPane.setVisible(false);
-        //aboutScrollPane.setVisible(false);
+        aboutPane2.setVisible(false);
     }
 
     private void update() {
