@@ -384,54 +384,64 @@
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Label>
-            <VBox layoutX="14.0" layoutY="63.0" prefHeight="249.0" prefWidth="354.0">
+            <VBox layoutX="14.0" layoutY="63.0" prefHeight="293.0" prefWidth="354.0">
                <children>
-                  <Label prefHeight="24.0" prefWidth="354.0" text="Thanks to:" wrapText="true">
+                  <Label prefHeight="24.0" prefWidth="354.0" text="Contribution and thanks to:" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="354.0" text="- Alvin Indrawan" wrapText="true">
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="354.0" text="- Alvin Indrawan (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="34.0" prefHeight="24.0" prefWidth="354.0" text="- Ari Candra Kusuma" wrapText="true">
+                  <Label layoutX="10.0" layoutY="34.0" prefHeight="24.0" prefWidth="354.0" text="- Ari Candra Kusuma (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="58.0" prefHeight="24.0" prefWidth="354.0" text="- Fajar Pratama" wrapText="true">
+                  <Label layoutX="10.0" layoutY="58.0" prefHeight="24.0" prefWidth="354.0" text="- Fajar Pratama (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="82.0" prefHeight="24.0" prefWidth="354.0" text="- Joko Sulistyo" wrapText="true">
+                  <Label layoutX="10.0" layoutY="82.0" prefHeight="24.0" prefWidth="354.0" text="- Joko Sulistyo (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="106.0" prefHeight="24.0" prefWidth="354.0" text="- Lysa Apriani" wrapText="true">
+                  <Label layoutX="10.0" layoutY="106.0" prefHeight="24.0" prefWidth="354.0" text="- Lysa Apriani (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="130.0" prefHeight="24.0" prefWidth="354.0" text="- Naufal fadhilah Alwan" wrapText="true">
+                  <Label layoutX="10.0" layoutY="226.0" prefHeight="24.0" prefWidth="354.0" text="- Maria Prudence Lovelyne Susanto (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="154.0" prefHeight="24.0" prefWidth="354.0" text="- Noviyana" wrapText="true">
+                  <Label layoutX="10.0" layoutY="130.0" prefHeight="24.0" prefWidth="354.0" text="- Naufal fadhilah Alwan (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="178.0" prefHeight="24.0" prefWidth="354.0" text="- Tomflynn Beltsazar" wrapText="true">
+                  <Label layoutX="10.0" layoutY="154.0" prefHeight="24.0" prefWidth="354.0" text="- Noviyana (Kelompok 1)" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="202.0" prefHeight="24.0" prefWidth="354.0" text="- Viona Cornelia" wrapText="true">
+                  <Label layoutX="10.0" layoutY="178.0" prefHeight="24.0" prefWidth="354.0" text="- Tomflynn Beltsazar (Kelompok 1)" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="202.0" prefHeight="24.0" prefWidth="354.0" text="- Viona Cornelia (Kelompok 1)" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="250.0" prefHeight="24.0" prefWidth="354.0" text="- Google, Stackoverflow, Github, and YouTube" wrapText="true">
                      <font>
                         <Font name="Segoe UI Light" size="15.0" />
                      </font>
