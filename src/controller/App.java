@@ -1,6 +1,5 @@
 package controller;
 
-//import java.io.IOException;
 import java.time.LocalDateTime;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -14,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -55,6 +55,14 @@ public class App extends Application {
     private ImageView ivGreetings;
     @FXML
     private Label lblWelcome;
+    @FXML
+    private Pane aboutPane;
+    @FXML
+    private Pane homePane;
+    @FXML
+    private Pane homePane2;
+    @FXML
+    private ScrollPane aboutScrollPane;
 
     // Field declaration
     enum PlantMode {
@@ -173,6 +181,22 @@ public class App extends Application {
         stage.show();
     }
     */
+
+    @FXML
+    private void onAboutClick(ActionEvent e) {
+        homePane.setVisible(false);
+        homePane2.setVisible(false);
+        aboutPane.setVisible(true);
+        //aboutScrollPane.setVisible(true);
+    }
+
+    @FXML
+    private void onHomeClick(ActionEvent e) {
+        homePane.setVisible(true);
+        homePane2.setVisible(true);
+        aboutPane.setVisible(false);
+        //aboutScrollPane.setVisible(false);
+    }
 
     private void update() {
         cBoxPlant.setItems(FXCollections.observableArrayList(plantNames));
